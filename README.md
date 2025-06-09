@@ -1,5 +1,3 @@
-Here's a professional `README.md` file you can use for your GitHub repository that contains the background replacement project using OpenCV:
-
 ---
 # 🎥 Background Replacement using OpenCV
 
