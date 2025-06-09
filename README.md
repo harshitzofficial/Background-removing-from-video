@@ -96,13 +96,9 @@ You can tweak the HSV values if your green screen has a different shade.
 * Support for webcam input.
 * Export as a web tool using Flask or Streamlit.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
-Made with ❤️ by [Harshit Singh](https://github.com/yourusername)
+Made with ❤️ by [Harshit Singh](https://github.com/harshitzofficial)
 
 ```
 
