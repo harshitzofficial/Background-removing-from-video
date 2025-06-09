@@ -1,25 +1,48 @@
-# Background-removing-from-video
-Green Screen Removal and Background Replacement
-Key Features:
+# 🎥 Background Replacement using OpenCV
 
-~Green Screen Detection: Detects and masks green screens using a customizable color range in HSV space.
+This project demonstrates how to **replace a green screen background in a video** with a custom image using OpenCV and Python. It's a practical computer vision project that showcases the power of **color masking and blending** techniques in real-time video processing.
 
-~Background Replacement: Replaces the green screen with any custom image, resizing it to fit the video dimensions.
+## 📌 Features
 
-~Real-Time Processing: Supports both video files and webcam input, allowing real-time background replacement.
+- Detects and removes green background using HSV color space.
+- Replaces green screen with a custom image.
+- Processes each frame of a video and saves the output.
+- Real-time visualization of the replacement.
 
-~Customization: Flexible color range adjustment for different green shades or other background colors.
+## 🧠 Tech Stack
 
-Technologies Used:
-~Python: Core language.
+- Python
+- OpenCV
+- NumPy
 
-~OpenCV: For video and image processing.
+## 📁 File Structure
 
-~NumPy: For efficient masking and blending.
+📂 green-screen-replacer/
+├── main.py # Python script with complete background replacement logic
+├── output_video_with_background.mp4 # Final rendered video
+├── input_video.mp4 # Input video file (green screen)
+├── background.jpg # Background image to overlay
+└── README.md # Project documentation
 
-Applications:
+## ▶️ How It Works
 
-~Video Editing: Changing video backgrounds for content creation, film, and virtual environments.
+1. Read the input video using `cv2.VideoCapture`.
+2. Convert each frame from BGR to HSV color space.
+3. Create a mask using the defined green HSV range.
+4. Invert the mask to extract the non-green parts (foreground).
+5. Replace green areas with the resized custom background.
+6. Merge the foreground and new background using `cv2.add`.
+7. Save the processed video and optionally display it in a window.
 
-~Virtual Environments: Background replacement for video calls or broadcasting.
+## 🧪 Example Code Snippet
 
+```python
+def replace_background(frame, background, lower_bound, upper_bound):
+    background_resized = cv2.resize(background, (frame.shape[1], frame.shape[0]))
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    mask = cv2.inRange(hsv, lower_bound, upper_bound)
+    mask_inv = cv2.bitwise_not(mask)
+    foreground = cv2.bitwise_and(frame, frame, mask=mask_inv)
+    background_part = cv2.bitwise_and(background_resized, background_resized, mask=mask)
+    result = cv2.add(foreground, background_part)
+    return result
