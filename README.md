@@ -46,7 +46,11 @@ def replace_background(frame, background, lower_bound, upper_bound):
     result = cv2.add(foreground, background_part)
     return result
 ````
+##  Interface
 
+![image](https://github.com/user-attachments/assets/55dc4bc8-d47c-4875-ba40-fbf4a8369978)
+
+---
 ## 🖼️ Sample Output
 
 ### 🎬 Original Video:
@@ -104,4 +108,3 @@ You can tweak the HSV values if your green screen has a different shade.
 
 Made with ❤️ by [Harshit Singh](https://github.com/harshitzofficial)
 
-```
