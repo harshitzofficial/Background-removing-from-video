@@ -60,7 +60,7 @@ def replace_background(frame, background, lower_bound, upper_bound):
 ---
 
 ### 🎥 Output Video (with Background Replaced):
-https://github.com/user-attachments/assets/e2ede54f-d843-457d-b405-b76282cf7544
+(https://github.com/user-attachments/assets/e2ede54f-d843-457d-b405-b76282cf7544)
 
 ---
 
