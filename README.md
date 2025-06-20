@@ -60,13 +60,8 @@ def replace_background(frame, background, lower_bound, upper_bound):
 ---
 
 ### 🎥 Output Video (with Background Replaced):
-[🔗 Watch Output Video](https://github.com/user-attachments/assets/66808055-0018-434d-ba68-776693652b26)
+[🔗 Watch Output Video](https://github.com/user-attachments/assets/74cac083-adc4-4640-b01f-472fc54f8258)
 
-
-
-## ⚙️ Setup Instructions
-
-Here’s a **clean and professional format** for the setup instructions section of your `README.md`, styled just like official GitHub projects:
 
 ---
 
