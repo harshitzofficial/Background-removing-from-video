@@ -1,40 +1,37 @@
 ---
 # 🎥 Background Replacement using OpenCV
 
-This project demonstrates how to **replace a green screen background in a video** with a custom image using OpenCV and Python. It's a practical computer vision project that showcases the power of **color masking and blending** techniques in real-time video processing.
+This project demonstrates how to replace a green screen background in a video with a custom image using **OpenCV** and **Python**. It's a practical computer vision project that showcases the power of color masking and blending techniques in real-time video processing.
+
+---
 
 ## 📌 Features
 
-- Detects and removes green background using HSV color space.
-- Replaces green screen with a custom image.
-- Processes each frame of a video and saves the output.
-- Real-time visualization of the replacement.
+- ✅ Detects and removes green background using HSV color space
+- ✅ Replaces green screen with any custom image
+- ✅ Processes each frame of a video and saves the output
+- ✅ Real-time preview using Streamlit
+- ✅ Downloadable final video output
+---
 
 ## 🧠 Tech Stack
 
-- Python
-- OpenCV
-- NumPy
+- **Python 3.x**
+- **OpenCV**
+- **NumPy**
+- **Streamlit** (for UI)
 
-## 📁 File Structure
-
-📂 green-screen-replacer/
-├── main.py                   # Python script with complete background replacement logic
-├── output\_video\_with\_background.mp4  # Final rendered video
-├── input\_video.mp4           # Input video file (green screen)
-├── background.jpg            # Background image to overlay
-└── README.md                 # Project documentation
-
+---
 
 ## ▶️ How It Works
 
-1. Read the input video using `cv2.VideoCapture`.
-2. Convert each frame from BGR to HSV color space.
-3. Create a mask using the defined green HSV range.
-4. Invert the mask to extract the non-green parts (foreground).
-5. Replace green areas with the resized custom background.
-6. Merge the foreground and new background using `cv2.add`.
-7. Save the processed video and optionally display it in a window.
+1. Reads the input video using `cv2.VideoCapture`
+2. Converts each frame from BGR to HSV color space
+3. Creates a mask based on a defined green HSV range
+4. Inverts the mask to extract non-green (foreground) parts
+5. Replaces green areas with the resized custom background
+6. Merges the two using `cv2.add`
+7. Displays the processed result and allows it to be downloaded
 
 ## 🧪 Example Code Snippet
 
@@ -52,33 +49,53 @@ def replace_background(frame, background, lower_bound, upper_bound):
 
 ## 🖼️ Sample Output
 
-> ⚠️ *You can include screenshots or GIFs of before and after the background replacement to visually demonstrate the effect.*
+### 🎬 Original Video:
+[🔗 Watch Original Video](https://github.com/user-attachments/assets/ddd5643c-4826-4ff3-abba-6ee35443a562)
+
+---
+
+### 🌄 Background Image Used:
+![Background Image](https://github.com/user-attachments/assets/42beeeb8-5745-4042-9b8e-a629ad6a8d5f)
+
+---
+
+### 🎥 Output Video (with Background Replaced):
+[🔗 Watch Output Video](https://github.com/user-attachments/assets/66808055-0018-434d-ba68-776693652b26)
+
+
 
 ## ⚙️ Setup Instructions
 
-1. Clone the repository:
+Here’s a **clean and professional format** for the setup instructions section of your `README.md`, styled just like official GitHub projects:
 
-   ```bash
-   git clone https://github.com/yourusername/green-screen-replacer.git
-   cd green-screen-replacer
-   ```
+---
 
-2. Install dependencies:
+## ⚙️ Setup Instructions
 
-   ```bash
-   pip install opencv-python numpy
-   ```
+### 📁 1. Clone the Repository
 
-3. Replace paths in `main.py`:
+```bash
+git clone https://github.com/harshitzofficial/Background-removing-from-video.git
+cd Background-removing-from-video
+```
 
-   * Update the input video path.
-   * Update the background image path.
+---
 
-4. Run the script:
+### 📦 2. Install Dependencies
 
-   ```bash
-   python main.py
-   ```
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### ▶️ 3. Run the Streamlit App
+
+```bash
+streamlit run app.py
+```
+
+---
 
 ## 🎯 HSV Range Used for Green
 
@@ -89,20 +106,8 @@ upper_green = np.array([85, 255, 255])
 
 You can tweak the HSV values if your green screen has a different shade.
 
-## 🚀 Future Improvements
-
-* Add CLI arguments for video/image paths and HSV ranges.
-* Integrate GUI slider for dynamic HSV adjustment.
-* Support for webcam input.
-* Export as a web tool using Flask or Streamlit.
-
 ---
 
 Made with ❤️ by [Harshit Singh](https://github.com/harshitzofficial)
 
-```
-
----
-
-Let me know if you'd like this README tailored further for Streamlit app, webcam support, or deployment steps!
 ```
